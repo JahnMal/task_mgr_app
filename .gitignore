@@ -1,0 +1,20 @@
+# Node modules
+/frontend/node_modules/
+
+# Build files
+/frontend/dist/
+/backend/bin/
+/backend/tmp/
+
+# System
+.DS_Store
+
+# Environment
+.env
+
+# Vite cache
+/frontend/.vite
+
+# Go build output
+/backend/*.exe
+/backend/*.out
