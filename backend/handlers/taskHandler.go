@@ -6,8 +6,6 @@ import (
 
 	"github.com/JahnMal/task_mgr_app/backend/models"
 	"github.com/JahnMal/task_mgr_app/backend/utils"
-	"github.com/JahnMal/task_mgr_app/models"
-	"github.com/JahnMal/task_mgr_app/utils"
 	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 )
@@ -17,7 +15,7 @@ func GetTasks(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(utils.Tasks)
 }
 
-func CreateTask(w, http.ResponseWriter, r *http.Request) {
+func CreateTask(w http.ResponseWriter, r *http.Request) {
 	var task models.Task
 	_ = json.NewDecoder(r.Body).Decode(&task)
 	task.ID = uuid.New().String()
